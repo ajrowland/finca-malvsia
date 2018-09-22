@@ -1,6 +1,96 @@
-$primary: #ccc;
+@import 'reset-css';
+
+$color-primary: #ccc;
+$color-white: #fff;
+
+$spacing-large: 20px;
+$spacing-medium: 15px;
+$spacing-small: 10px;
 
 body {
-  margin: 0;
   font-family: 'Bree Serif', serif;
+  font-size: 14px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 30px;
+  border-bottom: 2px solid $color-white;
+  display: inline-block;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+
+  &:hover {
+    text-decoration: underline;
+    transition: all ease-in 0.3s;
+  }
+}
+
+.header {
+  position: relative;
+
+  &__container {
+    position: absolute;
+    top: $spacing-large;
+    left: $spacing-large;
+    right: $spacing-large;
+  }
+
+  &__navigation {
+    display: flex;
+    border-bottom: 2px solid $color-white;
+  }
+
+  &__navigation-links {
+    display: flex;
+    margin-left: auto;
+    align-self: flex-end;
+
+    li {
+      margin-left: $spacing-large;
+    }
+  }
+
+  &__language-links {
+    display: flex;
+    float: right;
+
+    li {
+      margin-left: $spacing-large;
+    }
+  }
+
+  &__slider {
+    img {
+      display: none;
+      width: 100%;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
 }

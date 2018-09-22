@@ -7,8 +7,349 @@
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
   </head>
   <body>
+    <header class="header">
+      <div class="header__container">
+        <nav class="header__navigation">
+          <a href="/" title="Home" class="header__title">
+            <h1>Finca Malvasia</h1>
+            <h2>Volcanic vineyard accommodation</h2>
+          </a>
+          <ul class="header__navigation-links">
+            <li><a href="#" title="Reservations">Reservations</a></li>
+            <li><a href="#" title="Gallery">Gallery</a></li>
+            <li><a href="#" title="Accommodation">Accommodation</a></li>
+            <li><a href="#" title="Wellness">Wellness</a></li>
+            <li><a href="#" title="vineyard &amp; wines">vineyard &amp; wines</li>
+            <li><a href="#" title="About us">About us</a></li>
+          </ul>
+        </nav>
+        <ul class="header__language-links">
+          <li><a href="#" title="English">English</a></li>
+          <li><a href="#" title="Español">Español</a></li>
+          <li><a href="#" title="Dutch">Dutch</a></li>
+          <li><a href="#" title="Aleman">Aleman</a></li>
+          <li><a href="#" title="Fancais">Francais</a></li>
+        </ul>
+      </div>
+      <section class="header__slider">
+        <img src="http://www.fincamalvasia.com/images/home-gallery/1.jpg" />
+        <img src="http://www.fincamalvasia.com/images/home-gallery/2.jpg" />
+        <img src="http://www.fincamalvasia.com/images/home-gallery/3.jpg" />
+        <img src="http://www.fincamalvasia.com/images/home-gallery/4.jpg" />
+        <img src="http://www.fincamalvasia.com/images/home-gallery/5.jpg" />
+        <img src="http://www.fincamalvasia.com/images/home-gallery/6.jpg" />
+      </section>
+    </header>
     <main>
-      <h1>Finca Malvasia</h1>
+      <section class="reservation">
+        <form action="#" method="post" class="reservation__form">
+          <h3>Online reservation enquery</h3>
+          <label class="reservation__field reservation__field--arrival">
+            Arrival Date
+            <input type="date" name="date_arrive" />
+          </label>
+          <label class="reservation__field reservation__field--departure">
+            Departure Date
+            <input type="date" name="date_depart" />
+          </label>
+          <label class="reservation__field reservation__field--adults">
+            Adults
+            <select name="num_adult">
+              <option></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </label>
+          <label class="reservation__field reservation__field--children">
+            Children
+            <select name="num_child">
+                <option></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </label>
+          <button>Check Availability</button>
+        </form>
+        <div class="reservation__contact">
+          <p>Telephone us: <a href="tel:0034 665 468 538" title="Telephone us">0034 665 468 538</a></p>
+          <p>Email us: <a href="email:into@fincamalvasia.com" title="Email us">info@fincamalvasia.com</a></p>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__info-blocks">
+          <div class="about__info-block">
+            <h3>The finca</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus enim vitae euismod pharetra. Aliquam ipsum est, viverra at lectus ut, luctus auctor libero. Fusce sem leo, sollicitudin ut convallis at, egestas ac diam. Proin pharetra pulvinar rutrum. Nunc non neque ut massa tincidunt porta quis id neque. Integer gravida elit metus, non sodales nunc convallis vitae.</p>
+          </div>
+          <div class="about__info-block">
+            <h3>Accommodation</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus enim vitae euismod pharetra. Aliquam ipsum est, viverra at lectus ut, luctus auctor libero. Fusce sem leo, sollicitudin ut convallis at, egestas ac diam. Proin pharetra pulvinar rutrum. Nunc non neque ut massa tincidunt porta quis id neque. Integer gravida elit metus, non sodales nunc convallis vitae.</p>
+          </div>
+          <div class="about__info-block">
+            <h3>Vineyard &amp; Wine</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus enim vitae euismod pharetra. Aliquam ipsum est, viverra at lectus ut, luctus auctor libero. Fusce sem leo, sollicitudin ut convallis at, egestas ac diam. Proin pharetra pulvinar rutrum. Nunc non neque ut massa tincidunt porta quis id neque. Integer gravida elit metus, non sodales nunc convallis vitae.</p>
+          </div>
+        </div>
+        <div class="about__additional">
+          <h3>News &amp; special offers</h3>
+          <p><strong>20%</strong> off remaining SEPTEMBER dates <a href="#" title="Book now">CLICK HERE TO BOOK NOW >>></a></P>
+          <p>Check out our <a href="#" title="Blog &amp; social media">BLOG &amp; Social Media</a></p>
+          <p>Check out our <a href="#" title="Youtube">YOUTUBE VIDEOS...</a></p>
+          <h3>Do you follow?</h3>
+          <ul ckass="about__social-block">
+            <li><a href="#" title="Facebook" class="about__social-item about__social-item--facebook">Facebook</a></li>
+            <li><a href="#" title="Twitter" class="about__social-item about__social-item--twitter">Twitter</a></li>
+            <li><a href="#" title="Pinterest" class="about__social-item about__social-item--pinterest">Pinterest</a></li>
+            <li><a href="#" title="Instagram" class="about__social-item about__social-item--instragram">Instagram</a></li>
+            <li><a href="#" title="Skype" class="about__social-item about__social-item--skype">Skype</a></li>
+            <li><a href="#" title="Youtube" class="about__social-item about__social-item--youtube">Youtube</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="properties">
+        <div class="properties__row">
+          <div class="properties__item" background="http://www.fincamalvasia.com/images/home-gallery/6.jpg">
+            <div class="properties__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
+            <h3>La Finca</h3>
+            <div class="properties__item-info">
+              <a href="#" title="La Finca Overview">La Finca Overview</a>
+              -
+              <a href="#" title="View full descriptions &amp; image gallery">View full descriptions &amp; image gallery</a>
+              -
+              <a href="#" title="Book now">Book now</a>
+            </div>
+          </div>
+          <div class="properties__item" background="http://www.fincamalvasia.com/images/home-gallery/6.jpg">
+            <div class="properties__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
+            <h3>La Finca</h3>
+            <div class="properties__item-info">
+              <a href="#" title="La Finca Overview">La Finca Overview</a>
+              -
+              <a href="#" title="View full descriptions &amp; image gallery">View full descriptions &amp; image gallery</a>
+              -
+              <a href="#" title="Book now">Book now</a>
+            </div>
+          </div>
+        </div>
+        <div class="properties__row">
+          <div class="properties__item" background="http://www.fincamalvasia.com/images/home-gallery/6.jpg">
+            <div class="properties__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
+            <h3>La Finca</h3>
+            <div class="properties__item-info">
+              <a href="#" title="La Finca Overview">La Finca Overview</a>
+              -
+              <a href="#" title="View full descriptions &amp; image gallery">View full descriptions &amp; image gallery</a>
+              -
+              <a href="#" title="Book now">Book now</a>
+            </div>
+          </div>
+          <div class="properties__item" background="http://www.fincamalvasia.com/images/home-gallery/6.jpg">
+            <div class="properties__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
+            <h3>La Finca</h3>
+            <div class="properties__item-info">
+              <a href="#" title="La Finca Overview">La Finca Overview</a>
+              -
+              <a href="#" title="View full descriptions &amp; image gallery">View full descriptions &amp; image gallery</a>
+              -
+              <a href="#" title="Book now">Book now</a>
+            </div>
+          </div>
+        </div>
+        <div class="properties__row">
+          <div class="properties__item" background="http://www.fincamalvasia.com/images/home-gallery/6.jpg">
+            <div class="properties__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
+            <h3>La Finca</h3>
+            <div class="properties__item-info">
+              <a href="#" title="La Finca Overview">La Finca Overview</a>
+              -
+              <a href="#" title="View full descriptions &amp; image gallery">View full descriptions &amp; image gallery</a>
+              -
+              <a href="#" title="Book now">Book now</a>
+            </div>
+          </div>
+          <div class="properties__item" background="http://www.fincamalvasia.com/images/home-gallery/6.jpg">
+            <div class="properties__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
+            <h3>La Finca</h3>
+            <div class="properties__item-info">
+              <a href="#" title="La Finca Overview">La Finca Overview</a>
+              -
+              <a href="#" title="View full descriptions &amp; image gallery">View full descriptions &amp; image gallery</a>
+              -
+              <a href="#" title="Book now">Book now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reservation">
+        <form action="#" method="post" class="reservation__form">
+          <h3>Online reservation enquery</h3>
+          <label class="reservation__field reservation__field--arrival">
+            Arrival Date
+            <input type="date" name="date_arrive" />
+          </label>
+          <label class="reservation__field reservation__field--departure">
+            Departure Date
+            <input type="date" name="date_depart" />
+          </label>
+          <label class="reservation__field reservation__field--adults">
+            Adults
+            <select name="num_adult">
+              <option></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </label>
+          <label class="reservation__field reservation__field--children">
+            Children
+            <select name="num_child">
+                <option></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+          </label>
+          <button>Check Availability</button>
+        </form>
+        <div class="reservation__contact">
+          <p>Telephone us: <a href="tel:0034 665 468 538" title="Telephone us">0034 665 468 538</a></p>
+          <p>Email us: <a href="email:into@fincamalvasia.com" title="Email us">info@fincamalvasia.com</a></p>
+        </div>
+      </section>
+      <section class="experiences">
+        <h3>Guests experiences</h3>
+        <ul class="experiences__items">
+          <li class="experiences__item">
+            <h3>Learn to surf</h3>
+            <img src="http://placeimg.com/640/480/any" />
+          </li>
+          <li class="experiences__item">
+            <h3>Wine testing &amp; vineuard tour</h3>
+            <img src="http://placeimg.com/640/480/any" />
+          </li>
+          <li class="experiences__item">
+            <h3>Boat charter &amp; fishing trips</h3>
+            <img src="http://placeimg.com/640/480/any" />
+          </li>
+          <li class="experiences__item">
+            <h3>Mountain &amp; road bike hire</h3>
+            <img src="http://placeimg.com/640/480/any" />
+          </li>
+        </ul>
+      </section>
+      <section class="reviews">
+        <div class="reviews__block">
+          <h3>Quest reviews &amp; comments</h3>
+          <blockquote class="reviews__quote reviews__quote--5">My 9th visit and still totally in love with the place!</blockquote>
+          <p>Lorem ipsum dolor sit amet, ad mei prima accusamus, inermis periculis an mea. Duo minim possim efficiantur id, duo eu omnes congue. Mucius dolorem interesset has ex, stet accumsan prodesset in usu, vis doctus fabulas an.</p>
+        </div>
+        <div class="reviews__block">
+          <h3>Trip advisor average: <strong>5 out of 5</strong></h3>
+          <blockquote class="reviews__quote reviews__quote--5">A very special place</blockquote>
+          <p>Lorem ipsum dolor sit amet, ad mei prima accusamus, inermis periculis an mea. Duo minim possim efficiantur id, duo eu omnes congue. Mucius dolorem interesset has ex, stet accumsan prodesset in usu, vis doctus fabulas an.</p>
+        </div>
+      </section>
+      <section class="more-info">
+        <div class="more-info__newsletter">
+          <h3>Finca Malvasia newsletter</h3>
+          <p>join our email newsletter to receive info and updates about events, availability &amp; special offers.</p>
+          <form method="post" action="#">
+            <input type="email" name="email" class="more-info__email-input" />
+            <button class="more-info_submit">Submit</button>
+          </form>
+        </div>
+        <div class="more-info__wifi">
+          <h3>Free WIFI</h3>
+          <p>All rooms have their own dedicated WIFI router included in the price.</p>
+        </div>
+        <div class="more-info__press">
+          <h3>Press</h3>
+          <p>A selection of publications Finca Malvasia has been featured</p>
+          <ul>
+            <li><a href="#" title="">The Observer</a></li>
+            <li><a href="#" title="">The Guardian</a></li>
+            <li><a href="#" title="">The Sunday Times</a></li>
+            <li><a href="#" title="">Independent</a></li>
+            <li><a href="#" title="">The Telegraph</a></li>
+          </ul>
+        </div>
+      </section>
     </main>
+    <footer>
+      <h3>Site map</h3>
+      <ul class="footer__sections">
+        <li>
+          <h4>Reservations</h4>
+          <ul class="footer__section-list">
+            <li><a href="#" title="">Book a room</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4>Gallery</h4>
+          <ul class="footer__section-list">
+            <li><a href="#" title="">Lanzarote</a></li>
+            <li><a href="#" title="">The grounds</a></li>
+            <li><a href="#" title="">La Finca</a></li>
+            <li><a href="#" title="">Link</a></li>
+            <li><a href="#" title="">Link</a></li>
+            <li><a href="#" title="">Link</a></li>
+            <li><a href="#" title="">Link</a></li>
+            <li><a href="#" title="">Link</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4>Accommodation</h4>
+          <ul class="footer__section-list">
+            <li><a href="#" title="">Link</a></li>
+            <li><a href="#" title="">Link</a></li>
+            <li><a href="#" title="">Link</a></li>
+            <li><a href="#" title="">Link</a></li>
+            <li><a href="#" title="">Link</a></li>
+            <li><a href="#" title="">Link</a></li>
+          </ul>
+        </li>
+        <li>
+            <h4>Wellness</h4>
+            <ul class="footer__section-list">
+              <li><a href="#" title="">Link</a></li>
+              <li><a href="#" title="">Link</a></li>
+              <li><a href="#" title="">Link</a></li>
+              <li><a href="#" title="">Link</a></li>
+            </ul>
+          </li>
+          <li>
+            <h4>Vineyard &amp; wines</h4>
+            <ul class="footer__section-list">
+              <li><a href="#" title="">Link</a></li>
+              <li><a href="#" title="">Link</a></li>
+              <li><a href="#" title="">Link</a></li>
+            </ul>
+          </li>
+          <li>
+            <h4>About us</h4>
+            <ul class="footer__section-list">
+              <li><a href="#" title="">Link</a></li>
+              <li><a href="#" title="">Link</a></li>
+              <li><a href="#" title="">Link</a></li>
+              <li><a href="#" title="">Link</a></li>
+              <li><a href="#" title="">Link</a></li>
+            </ul>
+          </li>
+      </ul>
+    </footer>
   </body>
 </html>
