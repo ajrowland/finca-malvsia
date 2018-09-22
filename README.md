@@ -4,9 +4,11 @@
 
 ```
 npn install
-npm run start```
+npm run start
+```
 
 ## To build
+
 ```
 npm run build
 ```
