@@ -8,27 +8,24 @@ module.exports = (env, options) => {
     module: {
       rules: [
         {
-          enforce: 'pre',
-          test: /\.js|.jsx?$/,
-          loader: 'standard-loader',
+          enforce: "pre",
+          test: /\.js$/,
           exclude: /node_modules/,
-          options: {
-            parser: 'babel-eslint'
-          }
+          loader: "eslint-loader",
         },
         {
-          test: /\.js|.jsx$/,
+          test: /\.js$/,
           exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader'
-          }
+          loader: "babel-loader",
         },
         {
           test: /\.html$/,
           use: [
             {
               loader: 'html-loader',
-              options: { minimize: false }
+              options: {
+                minimize: false
+              }
             }
           ]
         },
