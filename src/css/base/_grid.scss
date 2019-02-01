@@ -1,0 +1,250 @@
+:global {
+  .container {
+    width: 100%;
+    max-width: 1366px;
+    padding: 0 #{$gutter-sml/2};
+    margin: 0 auto;
+
+    @include respond-to('medium-screens') {
+      padding: 0 #{$gutter-med/2};
+    }
+
+    @include respond-to('wide-screens') {
+      padding: 0 #{$gutter-lrg/2};
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include clearfix;
+
+    [class*='col-'] {
+      padding: 0 #{$gutter-sml/2};
+    }
+
+    @include respond-to('medium-screens') {
+      [class*='col-'] {
+        padding: 0 #{$gutter-med/2};
+      }
+    }
+
+    @include respond-to('wide-screens') {
+      [class*='col-'] {
+        padding: 0 #{$gutter-lrg/2};
+      }
+    }
+
+    &--flex {
+      [class*='col-'] {
+        display: flex;
+      }
+    }
+
+    &--top {
+      align-items: flex-start;
+    }
+
+    &--bottom {
+      align-items: flex-end;
+    }
+
+    &--center {
+      align-items: center;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &--justify-center {
+      justify-content: center;
+      height: 100%;
+    }
+
+    &--space-between {
+      align-content: space-between;
+      height: 100%;
+    }
+
+    &--fit {
+      [class*='col-'] {
+        flex: 1;
+      }
+    }
+
+    &--full {
+      [class*='col-'] {
+        flex: 0 0 100%;
+      }
+    }
+
+    &--no-gutters {
+      [class*='col-'] {
+        padding: 0;
+      }
+    }
+
+    &--spaced {
+      padding: #{$sml-row-gap/2} 0;
+
+      @include respond-to('medium-screens') {
+        padding: $med-row-gap 0;
+      }
+
+      @include respond-to('wide-screens') {
+        padding: $lrg-row-gap 0;
+      }
+    }
+
+    .row {
+      margin-left: -#{$gutter-sml/2};
+      margin-right: - #{$gutter-sml/2};
+
+      @include respond-to('medium-screens') {
+        margin-left: -#{$gutter-med/2};
+        margin-right: - #{$gutter-med/2};
+      }
+
+      @include respond-to('wide-screens') {
+        margin-left: -#{$gutter-lrg/2};
+        margin-right: - #{$gutter-lrg/2};
+      }
+    }
+  }
+
+  [class*='col-'] {
+    flex: 1;
+  }
+
+  .col {
+    &--top {
+      align-self: flex-start;
+    }
+
+    &--bottom {
+      align-self: flex-end;
+    }
+
+    &--center {
+      align-self: center;
+    }
+
+    &--auto-size {
+      flex: none;
+    }
+  }
+
+  @include flexgrid(sml);
+
+  .hide-sm {
+    display: none;
+  }
+
+  .hide-med {
+    display: block;
+  }
+
+  .hide-lrg {
+    display: block;
+  }
+
+  .show-sm {
+    display: block;
+  }
+
+  .show-med {
+    display: none;
+  }
+
+  .show-lrg {
+    display: none;
+  }
+
+  @include respond-to(medium-screens) {
+    @include flexgrid(med);
+
+    .hide-sm {
+      display: block;
+    }
+
+    .hide-med {
+      display: none;
+    }
+
+    .hide-lrg {
+      display: block;
+    }
+
+    .show-sm {
+      display: none;
+    }
+
+    .show-med {
+      display: block;
+    }
+
+    .show-lrg {
+      display: none;
+    }
+  }
+
+  @include respond-to(wide-screens) {
+    @include flexgrid(lrg);
+
+    .hide-sm {
+      display: block;
+    }
+
+    .hide-med {
+      display: block;
+    }
+
+    .hide-lrg {
+      display: none;
+    }
+
+    .show-sm {
+      display: none;
+    }
+
+    .show-med {
+      display: none;
+    }
+
+    .show-lrg {
+      display: block;
+    }
+
+  }
+}
+
+@if $env = 'development' {
+  .has--grid-overlay::before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100vh;
+    content: '';
+    z-index: 10000;
+    pointer-events: none;
+
+    max-width: calc(100% - #{$gutter-sml * 2});
+    background-image: repeating-linear-gradient(to right, hsla(204, 80%, 72%, 0.25), hsla(204, 80%, 72%, 0.25) calc(100% / #{$columns} - 10px), transparent calc((100% / #{$columns}) - 10px), transparent calc(100% / #{$columns}));
+    background-size: calc(100% + 10px) 100%;
+
+    @include respond-to(medium-and-wide-screens) {
+      max-width: calc(#{$break-large - ($gutter-lrg * 2)});
+      background-image: repeating-linear-gradient(to right, hsla(204, 80%, 72%, 0.25), hsla(204, 80%, 72%, 0.25) calc(100% / #{$columns} - #{$gutter-lrg}), transparent calc((100% / #{$columns}) - #{$gutter-lrg}), transparent calc(100% / #{$columns}));
+      background-size: calc(100% + #{$gutter-lrg}) 100%;
+    }
+  }
+}

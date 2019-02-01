@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Finca Malvasia - @ViewData["Title"]</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="This is a description" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ff6f02" />
+  <link rel="icon" href="@Url.Content("~/content/images/favicon.ico")" />
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" />
+</head>
+<body>
+  <partial name="components/_SiteHeader" />
+  <main>
+    @RenderBody()
+  </main>
+  <partial name="components/_SiteFooter" />
+  @RenderSection("Scripts", required: false)
+</body>
+</html>

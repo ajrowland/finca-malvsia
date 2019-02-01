@@ -1,0 +1,15 @@
+.c-slider {
+  position: relative;
+  z-index: -1;
+  max-height: 75vh;
+  overflow: hidden;
+
+  img {
+    display: none;
+    width: 100%;
+
+    &:first-child {
+      display: block;
+    }
+  }
+}

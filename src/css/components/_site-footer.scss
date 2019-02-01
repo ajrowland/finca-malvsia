@@ -1,0 +1,18 @@
+.c-footer {
+  &__site-map {
+    color: $secondary;
+    background: $septenary;
+  
+    a {
+      color: $secondary;
+    }
+  }
+
+  &__sections {
+    display: flex;
+
+    li {
+      margin-right: 40px;
+    }
+  }
+}

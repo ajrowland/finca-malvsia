@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<metadata>
+		<id>allica-bank-marketing-static</id>
+		<version>0.0.0.0</version>
+		<authors>TAB/AmazeRealise</authors>
+		<description>Allica Bank marketing site static build</description>
+	</metadata>
+	<files>
+		<file src="dist\**\*.*" target="" />
+	</files>
+</package>

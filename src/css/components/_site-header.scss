@@ -1,0 +1,76 @@
+//@import 'hamburger';
+//@include respond-to(medium-and-wide-screens) {
+
+$color-primary: #ccc;
+$color-white: #fff;
+
+$spacing-large: 20px;
+$spacing-medium: 15px;
+$spacing-small: 10px;
+
+.c-header {
+  height: 200px;
+  margin-bottom: -200px;
+  padding-top: 30px;
+
+  h1 {
+    border-bottom: 2px solid $secondary;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 38px;
+    line-height: 1;
+    padding-bottom: 4px;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-white;
+  
+    &:hover {
+      text-decoration: underline;
+      transition: all ease-in 0.3s;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: $spacing-large;
+    left: $spacing-large;
+    right: $spacing-large;
+  }
+
+  &__navigation {
+    display: flex;
+    border-bottom: 2px solid $color-white;
+  }
+
+  &__navigation-links {
+    display: flex;
+    margin-left: auto;
+    align-self: flex-end;
+    text-transform: uppercase;
+
+    li {
+      margin-left: $spacing-large;
+    }
+  }
+
+  &__language-links {
+    display: flex;
+    float: right;
+    color: $secondary;
+
+    li + li {
+      margin-left: 5px;
+
+      &::before {
+        content: ':';
+        margin-right: 5px;
+      }
+    }
+  }
+}

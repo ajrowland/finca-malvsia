@@ -1,0 +1,28 @@
+.c-reservation {
+  color: $secondary;
+  background: $septenary;
+  margin: 2px 0 10px;
+
+  h2 {
+    font-size: 14px;
+    display: inline-block;
+  }
+
+  a {
+    color: $secondary;
+  }
+
+  button {
+    @include font('Bree Serif');
+    background: transparent;
+    color: $secondary;
+    border: 2px solid $secondary;
+    padding: 8px 20px;
+    box-shadow: 5px 5px 0 -2px $tertiary;
+  }
+
+  &__form,
+  &__contact {
+    display: inline-block;
+  }
+}
