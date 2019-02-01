@@ -1,6 +1,6 @@
-# Allica Bank marketing site front end implementation
+# Finca Malvasia front end implementation
 
-This repo contains the front end build to be integrated into Sitecore.
+This repo contains the front end build for the site.
 
 ## Environment:
 
