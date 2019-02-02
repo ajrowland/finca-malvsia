@@ -45,11 +45,13 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: [
-          {
-            loader: 'babel-loader',
+        use: {
+          loader: 'svg-url-loader',
+          options: {
+            encoding: 'base64',
+            stripdeclarations: true,
           }
-        ],
+        },
       },
     ],
   },

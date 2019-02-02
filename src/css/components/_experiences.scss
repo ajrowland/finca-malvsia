@@ -1,3 +1,43 @@
 .c-experiences {
-  background: $secondary;
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1px;
+  }
+
+  &__item {
+    flex-basis: 100%;
+    position: relative;
+    margin: 2px 1px 0;
+
+    @include respond-to('medium-screens') {
+      flex-basis: calc(50% - 2px);
+    }
+
+    @include respond-to('wide-screens') {
+      flex-basis: calc(25% - 2px);
+    }
+  }
+
+  h2 {
+    padding: 10px 30px;
+    background: $tertiary;
+    color: $secondary;
+  }
+
+  h3 {
+    position: absolute;
+    bottom: 0;
+    text-transform: none;
+    z-index: 2;
+    background: rgba($nonary, 0.4);
+    padding: 10px 30px;
+    color: $secondary;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
 }

@@ -1,3 +1,32 @@
 .c-property {
-  background: $secondary;
+  &__item {
+    padding-top: 67%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__item-spec {
+    color: $secondary;
+    background: rgba($tertiary, 0.8);
+    padding: 10px 30px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__item-info {
+    border: 1px solid $septenary;
+    padding: 10px 30px;
+    background: $secondary;
+  }
+
+  h2 {
+    color: $secondary;
+    margin: 10px 30px;
+    font-size: 24px;
+    text-transform: none;
+    top: 50px;
+    position: absolute;
+  }
 }

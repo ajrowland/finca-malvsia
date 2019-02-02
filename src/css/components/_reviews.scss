@@ -1,3 +1,44 @@
 .c-reviews {
-  background: $secondary;
+  &__blocks {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__block {
+    flex-basis: 100%;
+
+    @include respond-to('medium-and-wide-screens') {
+      flex-basis: 50%;
+    }
+  }
+
+  &__quote {
+    padding: 0 30px;
+    font-size: 18px;
+
+    &::after {
+      content: '';
+      background: url('../images/icons/tripadvisor.svg') no-repeat;
+      display: block;
+      height: 16px;
+      width: 100px;
+      background-size: cover;
+    }
+  }
+
+  h2 {
+    padding: 10px 30px;
+    background: $tertiary;
+    color: $secondary;
+    margin-bottom: 1em;
+
+    strong {
+      font-size: 22px;
+      line-height: 0;
+    }
+  }
+
+  p {
+    padding: 0 30px;
+  }
 }

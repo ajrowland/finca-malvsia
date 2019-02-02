@@ -10,9 +10,21 @@
 
   &__sections {
     display: flex;
+    flex-wrap: wrap;
 
-    li {
-      margin-right: 40px;
+    > li {
+      width: 50%;
+      margin-bottom: 20px;
+
+      @include respond-to('medium-and-wide-screens') {
+        margin-right: 40px;
+        width: auto;
+        margin-bottom: 0;
+      }
     }
+  }
+
+  h2 {
+    margin-bottom: 0.5em;
   }
 }
