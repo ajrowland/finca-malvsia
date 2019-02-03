@@ -1,5 +1,5 @@
 ﻿import SiteHeader from './components/siteheader.js';
-import ProfileList from './components/profilelist.js';
+import Slider from './components/slider.js';
 
 // Array.forEach polyfill.
 if (window.NodeList && !NodeList.prototype.forEach) {
@@ -22,29 +22,7 @@ if (typeof window.CustomEvent !== 'function') {
 
 // Initiate component functionality.
 new SiteHeader(document.querySelectorAll('[data-site-header]'));
-new ProfileList(document.querySelectorAll('[data-profile-list]'));
-
-// General code.  May refactor depending on how much is added.
-if (!document.body.classList.contains('is--editor-mode')) {
-  window.onscroll = function() {
-    let scrollY = window.scrollY || document.documentElement.scrollTop;
-
-    if (scrollY === 0) {
-      document.body.classList.remove('is--scrolling-down');
-      document.body.classList.remove('is--scrolling-up');
-    } else {
-      if (this.oldScroll > scrollY) {
-        document.body.classList.add('is--scrolling-up');
-        document.body.classList.remove('is--scrolling-down');
-      } else {
-        document.body.classList.add('is--scrolling-down');
-        document.body.classList.remove('is--scrolling-up');
-      }
-    }
-
-    this.oldScroll = scrollY;
-  }
-}
+new Slider(document.querySelectorAll('[data-slider]'));
 
 // Not used in production.
 if (process.env.NODE_ENV === 'development') {

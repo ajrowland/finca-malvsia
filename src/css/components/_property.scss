@@ -4,6 +4,35 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: '<';
+      font-size: 60px;
+      position: absolute;
+      left: 20px;
+      top: 40%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '>';
+      right: 20px;
+      left: auto;
+    }
+  }
+
+  &__item-gallery {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+
+    img {
+      display: block;
+    }
   }
 
   &__item-spec {
