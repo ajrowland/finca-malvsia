@@ -1,4 +1,23 @@
-//@import 'hamburger';
+@import 'hamburger';
+
+.is--nav-active {
+  @include respond-to('handhelds-and-small-screens') {
+    background: $septenary;
+
+    main,
+    footer {
+      display: none;
+    }
+
+    .c-header {
+      &__navigation-links,
+      &__language-links {
+        display: block;
+        margin: 20px 0;
+      }
+    }
+  }
+}
 
 .c-header {
   position: absolute;
@@ -10,13 +29,22 @@
     border-bottom: 2px solid $secondary;
     display: inline-block;
     text-transform: uppercase;
-    font-size: 38px;
+    font-size: 35px;
     line-height: 1;
     padding-bottom: 4px;
+
+    @include respond-to('medium-and-wide-screens') {
+      font-size: 38px;
+    }
   }
 
   h2 {
     text-transform: uppercase;
+    font-size: 15px;
+
+    @include respond-to('medium-and-wide-screens') {
+      font-size: 16px;
+    }
   }
 
   a {
@@ -29,6 +57,16 @@
     }
   }
 
+  &__toggle {
+    position: absolute;
+    right: 0;
+    top: 10px;
+
+    @include respond-to('medium-and-wide-screens') {
+      display: none;
+    }
+  }
+
   &__container {
     position: absolute;
     top: $gutter-lrg;
@@ -37,32 +75,53 @@
   }
 
   &__navigation {
-    display: flex;
-    border-bottom: 2px solid $secondary;
+    position: relative;
+
+    @include respond-to('medium-and-wide-screens') {
+      border-bottom: 2px solid $secondary;
+      display: flex;
+    }
   }
 
   &__navigation-links {
-    display: flex;
-    margin-left: auto;
-    align-self: flex-end;
     text-transform: uppercase;
+    font-size: 16px;
+    display: none;
 
-    li {
-      margin-left: $gutter-lrg;
+    a {
+      display: block;
+    }
+
+    @include respond-to('medium-and-wide-screens') {
+      display: flex;
+      margin-left: auto;
+      align-self: flex-end;
+
+      li {
+        margin: 0 0 0 $gutter-lrg;
+      }
     }
   }
 
   &__language-links {
-    display: flex;
-    float: right;
     color: $secondary;
+    display: none;
 
-    li + li {
-      margin-left: 5px;
+    a {
+      display: block;
+    }
 
-      &::before {
-        content: ':';
-        margin-right: 5px;
+    @include respond-to('medium-and-wide-screens') {
+      display: flex;
+      float: right;
+
+      li + li {
+        margin-left: 5px;
+  
+        &::before {
+          content: ':';
+          margin-right: 5px;
+        }
       }
     }
   }

@@ -3,7 +3,7 @@ $hamburger-padding-y: 0 !default;
 $hamburger-layer-width: 36px !default;
 $hamburger-layer-height: 2px !default;
 $hamburger-layer-spacing: 9px !default;
-$hamburger-layer-color: #000 !default;
+$hamburger-layer-color: $secondary !default;
 $hamburger-layer-border-radius: 4px !default;
 $hamburger-hover-opacity: 0.7 !default;
 $hamburger-active-layer-color: $hamburger-layer-color !default;
@@ -12,7 +12,7 @@ $hamburger-hover-filter: opacity(50%) !default;
 
 // Hamburger
 // ==================================================
-.c-site-header__toggle {
+.c-header__toggle {
   $root: &;
   padding: $hamburger-padding-y $hamburger-padding-x;
   display: inline-block;
@@ -32,7 +32,7 @@ $hamburger-hover-filter: opacity(50%) !default;
   overflow: visible;
   opacity: $hamburger-hover-opacity;
 
-  .is--active & {
+  .is--nav-active & {
     &:hover {
       opacity: $hamburger-active-hover-opacity;
     }
