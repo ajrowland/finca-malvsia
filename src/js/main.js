@@ -1,4 +1,5 @@
 ﻿import SiteHeader from './components/siteheader.js';
+import Gallery from './components/gallery.js';
 import Slider from './components/slider.js';
 
 // Array.forEach polyfill.
@@ -22,6 +23,7 @@ if (typeof window.CustomEvent !== 'function') {
 
 // Initiate component functionality.
 new SiteHeader(document.querySelectorAll('[data-site-header]'));
+new Gallery(document.querySelectorAll('[data-gallery]'));
 new Slider(document.querySelectorAll('[data-slider]'));
 
 // Not used in production.

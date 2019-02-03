@@ -1,6 +1,6 @@
 class Slider {
   constructor(elements) {
-    window.onload = function() {
+    window.addEventListener('load', () => {
       elements.forEach(function(el) {
 
         const cacheEl = {
@@ -29,7 +29,7 @@ class Slider {
           cacheEl.itemContainer.style.transform = `translateX(-${items[currentItem].offsetLeft}px)`;
         }, false);
       });
-    };
+    });
   }
 }
 

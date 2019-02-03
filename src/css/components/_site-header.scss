@@ -1,17 +1,10 @@
 //@import 'hamburger';
-//@include respond-to(medium-and-wide-screens) {
-
-$color-primary: #ccc;
-$color-white: #fff;
-
-$spacing-large: 20px;
-$spacing-medium: 15px;
-$spacing-small: 10px;
 
 .c-header {
-  height: 200px;
-  margin-bottom: -200px;
+  position: absolute;
   padding-top: 30px;
+  z-index: $first-index;
+  width: 100%;
 
   h1 {
     border-bottom: 2px solid $secondary;
@@ -28,7 +21,7 @@ $spacing-small: 10px;
 
   a {
     text-decoration: none;
-    color: $color-white;
+    color: $secondary;
   
     &:hover {
       text-decoration: underline;
@@ -38,14 +31,14 @@ $spacing-small: 10px;
 
   &__container {
     position: absolute;
-    top: $spacing-large;
-    left: $spacing-large;
-    right: $spacing-large;
+    top: $gutter-lrg;
+    left: $gutter-lrg;
+    right: $gutter-lrg;
   }
 
   &__navigation {
     display: flex;
-    border-bottom: 2px solid $color-white;
+    border-bottom: 2px solid $secondary;
   }
 
   &__navigation-links {
@@ -55,7 +48,7 @@ $spacing-small: 10px;
     text-transform: uppercase;
 
     li {
-      margin-left: $spacing-large;
+      margin-left: $gutter-lrg;
     }
   }
 
