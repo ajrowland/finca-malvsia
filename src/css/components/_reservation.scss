@@ -6,6 +6,10 @@
   h2 {
     font-size: 14px;
     display: inline-block;
+
+    @include respond-to('handhelds-and-small-screens') {
+      margin-bottom: 1em;
+    }
   }
 
   a {
@@ -21,10 +25,25 @@
     box-shadow: 5px 5px 0 -2px $tertiary;
   }
 
+  @include respond-to('handhelds-and-small-screens') {
+    label,
+    input {
+      display: block;
+    }
+
+    input,
+    select,
+    button {
+      margin-bottom: 1em;
+    }
+  }
+
   &__contact {
-    border-left: 2px solid $secondary;
-    padding-left: 20px;
-    font-size: 16px;
+    @include respond-to('medium-and-wide-screens') {
+      border-left: 2px solid $secondary;
+      padding-left: 20px;
+      font-size: 16px;
+    }
 
     a {
       display: block;
@@ -32,8 +51,10 @@
   }
 
   &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include respond-to('medium-and-wide-screens') {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }
