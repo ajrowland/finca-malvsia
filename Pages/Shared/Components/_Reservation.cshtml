@@ -2,31 +2,20 @@
   <div class="container">
     <div class="row row--spaced">
       <div class="col-sml-12">
-        <h2>Online reservation enquery</h2>
-        <form action="#" method="post" class="c-reservation__form">
-          <label class="c-reservation__field reservation__field--arrival">
-            Arrival Date
-            <input type="date" name="date_arrive" />
-          </label>
-          <label class="c-reservation__field reservation__field--departure">
-            Departure Date
-            <input type="date" name="date_depart" />
-          </label>
-          <label class="c-reservation__field reservation__field--adults">
-            Adults
-            <select name="num_adult">
-              <option></option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-            </select>
-          </label>
-          <label class="c-reservation__field reservation__field--children">
-            Children
-            <select name="num_child">
+        <div class="c-reservation__container">
+          <h2>Online reservation enquery</h2>
+          <form action="#" method="post" class="c-reservation__form">
+            <label class="c-reservation__field reservation__field--arrival">
+              Arrival Date
+              <input type="date" name="date_arrive" />
+            </label>
+            <label class="c-reservation__field reservation__field--departure">
+              Departure Date
+              <input type="date" name="date_depart" />
+            </label>
+            <label class="c-reservation__field reservation__field--adults">
+              Adults
+              <select name="num_adult">
                 <option></option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -35,12 +24,25 @@
                 <option value="5">5</option>
                 <option value="6">6</option>
               </select>
-          </label>
-          <button>Check Availability</button>
-        </form>
-        <div class="c-reservation__contact">
-          <p>Telephone us: <a href="tel:0034 665 468 538" title="Telephone us">0034 665 468 538</a></p>
-          <p>Email us: <a href="email:into@fincamalvasia.com" title="Email us">info@fincamalvasia.com</a></p>
+            </label>
+            <label class="c-reservation__field reservation__field--children">
+              Children
+              <select name="num_child">
+                  <option></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+            </label>
+            <button>Check Availability</button>
+          </form>
+          <div class="c-reservation__contact">
+            <a href="tel:0034 665 468 538" title="Telephone us">Telephone us: 0034 665 468 538</a>
+            <a href="email:into@@fincamalvasia.com" title="Email us">Email us: info@@fincamalvasia.com</a>
+          </div>
         </div>
       </div>
     </div>
