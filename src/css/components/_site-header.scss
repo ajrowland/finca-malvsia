@@ -107,8 +107,10 @@
     color: $secondary;
     display: none;
 
-    a {
-      display: block;
+    @include respond-to('handhelds-and-small-screens') {
+      a {
+        display: block;
+      }
     }
 
     @include respond-to('medium-and-wide-screens') {
