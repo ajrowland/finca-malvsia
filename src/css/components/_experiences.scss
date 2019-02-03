@@ -2,7 +2,11 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1px;
+    margin: 0 ($gutter-sml + 1)*-1;
+
+    @include respond-to('medium-and-wide-screens') {
+      margin: 0 ($gutter-lrg + 1)*-1;
+    }
   }
 
   &__item {
@@ -20,9 +24,15 @@
   }
 
   h2 {
-    padding: 10px 30px;
+    padding: 10px $gutter-sml;
+    margin: 0 $gutter-sml*-1;
     background: $tertiary;
     color: $secondary;
+
+    @include respond-to('medium-and-wide-screens') {
+      padding: 10px $gutter-lrg;
+      margin: 0 $gutter-lrg*-1;
+    }
   }
 
   h3 {
@@ -31,9 +41,13 @@
     text-transform: none;
     z-index: 2;
     background: rgba($nonary, 0.4);
-    padding: 10px 30px;
+    padding: 10px $gutter-sml;
     color: $secondary;
     width: 100%;
+
+    @include respond-to('medium-and-wide-screens') {
+      padding: 10px $gutter-lrg;
+    }
   }
 
   img {

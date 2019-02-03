@@ -9,24 +9,36 @@
   &__item-spec {
     color: $secondary;
     background: rgba($tertiary, 0.8);
-    padding: 10px 30px;
+    padding: 10px $gutter-sml;
     position: absolute;
     top: 0;
     width: 100%;
+
+    @include respond-to('medium-and-wide-screens') {
+      padding: 10px $gutter-lrg;
+    }
   }
 
   &__item-info {
     border: 1px solid $septenary;
-    padding: 10px 30px;
+    padding: 10px $gutter-sml;
     background: $secondary;
+
+    @include respond-to('medium-and-wide-screens') {
+      padding: 10px $gutter-lrg;
+    }
   }
 
   h2 {
     color: $secondary;
-    margin: 10px 30px;
+    margin: 10px $gutter-sml;
     font-size: 24px;
     text-transform: none;
     top: 50px;
     position: absolute;
+
+    @include respond-to('medium-and-wide-screens') {
+      margin: 10px $gutter-lrg;
+    }
   }
 }

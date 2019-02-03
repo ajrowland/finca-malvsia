@@ -1,3 +1,39 @@
-.c-slider {
-  background: $secondary;
+.c-more-info {
+  &__wifi,
+  &__newsletter,
+  &__press {
+    margin-bottom: $sml-row-gap * 2;
+  }
+
+  &__wifi {
+    &::after {
+      content: '';
+      background-size: cover;
+      background: url('../images/icons/wifi.svg') no-repeat;
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+    }
+  }
+
+  &__email-input {
+    border: 1px solid $septenary;
+    padding: 6px 10px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__submit {
+    background: $septenary;
+    color: $secondary;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    border: 0;
+    width: 100%;
+
+    @include respond-to('medium-and-wide-screens') {
+      width: auto;
+      float: right;
+    }
+  }
 }

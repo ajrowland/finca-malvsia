@@ -8,23 +8,19 @@
     }
   }
 
-  &__sections {
-    display: flex;
-    flex-wrap: wrap;
+  &__section-list {
+    margin-bottom: $sml-row-gap;
 
-    > li {
-      width: 50%;
-      margin-bottom: 20px;
-
-      @include respond-to('medium-and-wide-screens') {
-        margin-right: 40px;
-        width: auto;
-        margin-bottom: 0;
-      }
+    @include respond-to('medium-and-wide-screens') {
+      margin-bottom: $lrg-row-gap;
     }
   }
 
   h2 {
-    margin-bottom: 0.5em;
+    margin: $sml-row-gap 0 0.5em 0;
+  }
+
+  @include respond-to('medium-and-wide-screens') {
+    margin: $lrg-row-gap 0 0.5em 0;
   }
 }

@@ -32,13 +32,18 @@
   }
 
   &__social-item {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-repeat: no-repeat;
     background-size: cover;
     display: inline-block;
     text-indent: -9999px;
     margin: 0 10px;
+
+    @include respond-to('medium-and-wide-screens') {
+      width: 40px;
+      height: 40px;
+    }
 
     $platforms: 'facebook' 'twitter' 'pinterest' 'youtube' 'flickr' 'skype';
     @each $platform in $platforms {

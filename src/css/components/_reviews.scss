@@ -1,19 +1,5 @@
 .c-reviews {
-  &__blocks {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__block {
-    flex-basis: 100%;
-
-    @include respond-to('medium-and-wide-screens') {
-      flex-basis: 50%;
-    }
-  }
-
   &__quote {
-    padding: 0 30px;
     font-size: 18px;
 
     &::after {
@@ -27,18 +13,19 @@
   }
 
   h2 {
-    padding: 10px 30px;
+    padding: 10px $gutter-sml;
+    margin: 0 $gutter-sml*-1 1em;
     background: $tertiary;
     color: $secondary;
-    margin-bottom: 1em;
+
+    @include respond-to('medium-and-wide-screens') {
+      padding: 10px $gutter-lrg;
+      margin: 0 $gutter-lrg*-1 1em;
+    }
 
     strong {
       font-size: 22px;
       line-height: 0;
     }
-  }
-
-  p {
-    padding: 0 30px;
   }
 }
