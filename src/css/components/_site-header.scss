@@ -92,7 +92,13 @@
       display: block;
     }
 
-    @include respond-to('medium-and-wide-screens') {
+    @include respond-to('medium-screens') {
+      display: inline-block;
+      margin-left: auto;
+      column-count: 3;
+    }
+
+    @include respond-to('wide-screens') {
       display: flex;
       margin-left: auto;
       align-self: flex-end;

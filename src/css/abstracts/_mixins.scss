@@ -42,8 +42,12 @@
     @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
   }
 
+  @if $media == large-screens {
+    @media only screen and (min-width: $break-large + 1) and (max-width: $break-wide) { @content; }
+  }
+
   @if $media == wide-screens {
-    @media only screen and (min-width: $break-large + 1) { @content; }
+    @media only screen and (min-width: $break-wide + 1) { @content; }
   }
 
   @if $media == medium-and-wide-screens {

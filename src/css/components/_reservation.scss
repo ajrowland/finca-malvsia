@@ -31,10 +31,25 @@
       display: block;
     }
 
+    label,
+    button {
+      margin: 1em 0;
+    }
+  }
+
+  @include respond-to('medium-and-wide-screens') {
     input,
     select,
     button {
-      margin-bottom: 1em;
+      margin: 1em;
+    }
+  }
+
+  @include respond-to('wide-screens') {
+    input,
+    select,
+    button {
+      margin: 0;
     }
   }
 
@@ -55,6 +70,61 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+  }
+
+  &__field {
+    margin-right: 10px;
+
+    &--arrival,
+    &--departure {
+      span {
+        position: relative;
+        display: inline-block;
+        background: url('../images/icons/calendar.svg') no-repeat;
+        background-size: cover;
+        width: 35px;
+        height: 33px;
+        overflow: hidden;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+
+      input {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+
+    &--adults,
+    &--children {
+      &::before {
+        content: '';
+        display: inline-block;
+        background: url('../images/icons/list.svg') no-repeat;
+        background-size: cover;
+        width: 27px;
+        height: 33px;
+        overflow: hidden;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+
+      select {
+        color: $secondary;
+        border: 0;
+        background: url('../images/icons/arrowhead.svg') no-repeat $septenary;
+        background-size: 25px;
+        background-position: 100% 0%;
+        padding-right: 30px;
+        appearance: none;
+        /* stylelint-disable */
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        /* stylelint-enable */
+      }
     }
   }
 }

@@ -242,7 +242,7 @@
     background-size: calc(100% + 10px) 100%;
 
     @include respond-to(medium-and-wide-screens) {
-      max-width: calc(#{$break-large - ($gutter-lrg * 2)});
+      max-width: calc(#{$break-wide - ($gutter-lrg * 2)});
       background-image: repeating-linear-gradient(to right, hsla(204, 80%, 72%, 0.25), hsla(204, 80%, 72%, 0.25) calc(100% / #{$columns} - #{$gutter-lrg}), transparent calc((100% / #{$columns}) - #{$gutter-lrg}), transparent calc(100% / #{$columns}));
       background-size: calc(100% + #{$gutter-lrg}) 100%;
     }

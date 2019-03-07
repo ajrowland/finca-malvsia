@@ -5,15 +5,15 @@
         <div class="c-reservation__container">
           <h2>Online reservation enquery</h2>
           <form action="#" method="post" class="c-reservation__form">
-            <label class="c-reservation__field reservation__field--arrival">
+            <label class="c-reservation__field c-reservation__field--arrival">
+              <span><input type="date" name="date_arrive" /></span>
               Arrival Date
-              <input type="date" name="date_arrive" />
             </label>
-            <label class="c-reservation__field reservation__field--departure">
+            <label class="c-reservation__field c-reservation__field--departure">
+              <span><input type="date" name="date_depart" /></span>
               Departure Date
-              <input type="date" name="date_depart" />
             </label>
-            <label class="c-reservation__field reservation__field--adults">
+            <label class="c-reservation__field c-reservation__field--adults">
               Adults
               <select name="num_adult">
                 <option></option>
@@ -25,7 +25,7 @@
                 <option value="6">6</option>
               </select>
             </label>
-            <label class="c-reservation__field reservation__field--children">
+            <label class="c-reservation__field c-reservation__field--children">
               Children
               <select name="num_child">
                   <option></option>
@@ -40,7 +40,7 @@
             <button>Check Availability</button>
           </form>
           <div class="c-reservation__contact">
-            <a href="tel:0034 665 468 538" title="Telephone us">Telephone us: 0034 665 468 538</a>
+            <a href="tel:0034 665 468 538" title="Telephone us">Telephone us: 0034&nbsp;665&nbsp;468&nbsp;538</a>
             <a href="email:into@@fincamalvasia.com" title="Email us">Email us: info@@fincamalvasia.com</a>
           </div>
         </div>
