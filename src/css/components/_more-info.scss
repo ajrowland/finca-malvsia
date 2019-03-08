@@ -1,4 +1,7 @@
 .c-more-info {
+  border-top: 2px solid $primary;
+  padding-top: $gutter-sml;
+
   &__wifi,
   &__newsletter,
   &__press {

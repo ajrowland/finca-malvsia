@@ -45,12 +45,26 @@
     }
   }
 
+  &__field-container {
+    @include av-mq(lap-and-up) {
+      display: block;
+    }
+
+    @include av-mq(desk) {
+      display: inline-block;
+    }
+  }
+
   &__field {
     display: inline-block;
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
+
+    @include av-mq(palm) {
+      width: 48%;
+    }
 
     @include av-mq(lap-and-up) {
       width: auto;

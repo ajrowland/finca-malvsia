@@ -95,7 +95,7 @@
     @include av-mq(lap) {
       display: inline-block;
       margin-left: auto;
-      column-count: 3;
+      column-count: 4;
     }
 
     @include av-mq(desk) {

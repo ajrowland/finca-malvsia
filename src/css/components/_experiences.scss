@@ -11,16 +11,20 @@
 
   &__item {
     flex-basis: 100%;
-    position: relative;
     margin: 2px 1px 0;
 
-    @include av-mq(lap-and-up) {
+    @include av-mq(palm) {
       flex-basis: calc(50% - 2px);
     }
 
-    @include av-mq(desk) {
+    @include av-mq(lap-and-up) {
       flex-basis: calc(25% - 2px);
     }
+  }
+
+  a {
+    position: relative;
+    display: block;
   }
 
   h2 {
@@ -53,5 +57,10 @@
   img {
     width: 100%;
     display: block;
+  }
+
+  p {
+    padding: 20px 30px;
+    font-size: 14px;
   }
 }

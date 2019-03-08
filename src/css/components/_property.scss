@@ -4,6 +4,10 @@
     position: relative;
     overflow: hidden;
 
+    @include av-mq(lap-and-up) {
+      margin: 0 1px;
+    }
+
     &::before,
     &::after {
       content: '<';
@@ -12,6 +16,7 @@
       left: 20px;
       top: 40%;
       z-index: 1;
+      color: $secondary;
     }
 
     &::after {
@@ -50,10 +55,12 @@
     border: 1px solid $septenary;
     padding: 10px $gutter-sml;
     background: $secondary;
-    margin-bottom: $av-gutter;
+    margin-bottom: 2px;
 
     @include av-mq(lap-and-up) {
       padding: 10px $gutter-lrg;
+      margin-left: 1px;
+      margin-right: 1px;
     }
   }
 
