@@ -11,7 +11,7 @@
   &__section-list {
     margin-bottom: $sml-row-gap;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       margin-bottom: $lrg-row-gap;
     }
   }
@@ -20,7 +20,7 @@
     margin: $sml-row-gap 0 0.5em 0;
   }
 
-  @include respond-to('medium-and-wide-screens') {
+  @include av-mq(lap-and-up) {
     margin: $lrg-row-gap 0 0.5em 0;
   }
 }

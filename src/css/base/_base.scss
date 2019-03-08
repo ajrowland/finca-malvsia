@@ -168,7 +168,7 @@ body,
 button {
   font-size: $base-font-size-sml;
 
-  @include respond-to(medium-and-wide-screens) {
+  @include av-mq(lap-and-up) {
     font-size: $base-font-size-med;
   }
 }

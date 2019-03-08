@@ -31,7 +31,7 @@
     border: 0;
     width: 100%;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       width: auto;
       float: right;
     }

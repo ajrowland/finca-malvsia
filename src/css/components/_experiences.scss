@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     margin: 0 ($gutter-sml + 1)*-1;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       margin: 0 ($gutter-lrg + 1)*-1;
     }
   }
@@ -14,11 +14,11 @@
     position: relative;
     margin: 2px 1px 0;
 
-    @include respond-to('medium-screens') {
+    @include av-mq(lap-and-up) {
       flex-basis: calc(50% - 2px);
     }
 
-    @include respond-to('wide-screens') {
+    @include av-mq(desk) {
       flex-basis: calc(25% - 2px);
     }
   }
@@ -29,7 +29,7 @@
     background: $tertiary;
     color: $secondary;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       padding: 10px $gutter-lrg;
       margin: 0 $gutter-lrg*-1;
     }
@@ -45,7 +45,7 @@
     color: $secondary;
     width: 100%;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       padding: 10px $gutter-lrg;
     }
   }

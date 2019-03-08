@@ -16,15 +16,7 @@ $copy-normal: 14px;
 $copy-small: 14px;
 $copy-xsmall: 12px;
 
-// BREAKPOINTS
-$break-small: 375px;
-$break-medium: 768px;
-$break-large: 1240px;
-$break-wide: 1366px;
-
 // GRID
-$columns: 12;
-
 $gutter-sml: 20px;
 $gutter-med: 30px;
 $gutter-lrg: 30px;
@@ -32,6 +24,31 @@ $gutter-lrg: 30px;
 $sml-row-gap: 20px;
 $med-row-gap: 30px;
 $lrg-row-gap: 30px;
+
+$av-widths: (
+  2,
+  3,
+  4,
+  6,
+  12
+);
+
+$av-breakpoints: (
+  'thumb':        'screen and (max-width: 499px)',
+  'palm':         'screen and (min-width: 500px) and (max-width: 800px)',
+  'palm-and-up':  'screen and (min-width: 500px)',
+  'pocket':       'screen and (max-width: 800px)',
+  'lap':          'screen and (min-width: 801px) and (max-width: 1024px)',
+  'lap-and-up':   'screen and (min-width: 801px)',
+  'portable':     'screen and (max-width: 1024px)',
+  'desk':         'screen and (min-width: 1025px)',
+  'wide':         'screen and (min-width: 1160px)',
+  'retina':       '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)'
+);
+
+$av-enable-grid-auto: true;
+$av-enable-grid-middle: true;
+$av-enable-grid-flush: true;
 
 // FONTS
 $family-base: helvetica, arial, sans-serif;

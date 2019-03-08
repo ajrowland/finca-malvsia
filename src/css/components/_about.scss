@@ -1,6 +1,6 @@
 .c-about {
   &__info-block {
-    @include respond-to(medium-and-wide-screens) {
+    @include av-mq(lap-and-up) {
       position: relative;
       padding-left: 200px;
 
@@ -40,7 +40,7 @@
     text-indent: -9999px;
     margin: 0 10px;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       width: 40px;
       height: 40px;
     }

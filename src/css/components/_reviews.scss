@@ -18,7 +18,7 @@
     background: $tertiary;
     color: $secondary;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       padding: 10px $gutter-lrg;
       margin: 0 $gutter-lrg*-1 1em;
     }

@@ -41,7 +41,7 @@
     top: 0;
     width: 100%;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       padding: 10px $gutter-lrg;
     }
   }
@@ -50,8 +50,9 @@
     border: 1px solid $septenary;
     padding: 10px $gutter-sml;
     background: $secondary;
+    margin-bottom: $av-gutter;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       padding: 10px $gutter-lrg;
     }
   }
@@ -64,7 +65,7 @@
     top: 50px;
     position: absolute;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       margin: 10px $gutter-lrg;
     }
   }

@@ -1,7 +1,7 @@
 @import 'hamburger';
 
 .is--nav-active {
-  @include respond-to('handhelds-and-small-screens') {
+  @include av-mq(pocket) {
     background: $septenary;
 
     main,
@@ -33,7 +33,7 @@
     line-height: 1;
     padding-bottom: 4px;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       font-size: 38px;
     }
   }
@@ -42,7 +42,7 @@
     text-transform: uppercase;
     font-size: 15px;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       font-size: 16px;
     }
   }
@@ -62,7 +62,7 @@
     right: 0;
     top: 10px;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       display: none;
     }
   }
@@ -77,7 +77,7 @@
   &__navigation {
     position: relative;
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       border-bottom: 2px solid $secondary;
       display: flex;
     }
@@ -92,13 +92,13 @@
       display: block;
     }
 
-    @include respond-to('medium-screens') {
+    @include av-mq(lap) {
       display: inline-block;
       margin-left: auto;
       column-count: 3;
     }
 
-    @include respond-to('wide-screens') {
+    @include av-mq(desk) {
       display: flex;
       margin-left: auto;
       align-self: flex-end;
@@ -113,13 +113,15 @@
     color: $secondary;
     display: none;
 
-    @include respond-to('handhelds-and-small-screens') {
-      a {
-        display: block;
+    a {
+      display: block;
+
+      @include av-mq(lap-and-up) {
+        display: inline-block;
       }
     }
 
-    @include respond-to('medium-and-wide-screens') {
+    @include av-mq(lap-and-up) {
       display: flex;
       float: right;
 
