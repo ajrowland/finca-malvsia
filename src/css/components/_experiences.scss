@@ -22,6 +22,15 @@
     }
   }
 
+  &__info {
+    padding: $gutter-sml;
+    font-size: 14px;
+
+    @include av-mq(lap-and-up) {
+      padding: $gutter-sml $gutter-lrg;
+    }
+  }
+
   a {
     position: relative;
     display: block;
@@ -57,10 +66,5 @@
   img {
     width: 100%;
     display: block;
-  }
-
-  p {
-    padding: 20px 30px;
-    font-size: 14px;
   }
 }
