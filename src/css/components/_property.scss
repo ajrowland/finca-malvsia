@@ -14,9 +14,13 @@
       font-size: 60px;
       position: absolute;
       left: 20px;
-      top: 40%;
+      top: 30%;
       z-index: 1;
       color: $secondary;
+
+      @include av-mq(lap-and-up) {
+        top: 40%;
+      }
     }
 
     &::after {
@@ -42,12 +46,13 @@
     color: $secondary;
     background: rgba($tertiary, 0.8);
     padding: 10px $gutter-sml;
-    position: absolute;
     top: 0;
     width: 100%;
+    position: relative;
 
     @include av-mq(lap-and-up) {
       padding: 10px $gutter-lrg;
+      position: absolute;
     }
   }
 
@@ -69,11 +74,28 @@
     margin: 10px $gutter-sml;
     font-size: 24px;
     text-transform: none;
-    top: 50px;
+    top: 0;
     position: absolute;
 
     @include av-mq(lap-and-up) {
       margin: 10px $gutter-lrg;
+      top: 50px;
+    }
+  }
+
+  a {
+    display: block;
+
+    @include av-mq(lap-and-up) {
+      display: inline-block;
+
+      + a {
+        &::before {
+          content: '-';
+          display: inline-block;
+          margin: 0 10px;
+        }
+      }
     }
   }
 }
