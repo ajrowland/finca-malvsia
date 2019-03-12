@@ -24,13 +24,15 @@
     margin: $lrg-row-gap 0 0.5em 0;
   }
 
-  @include av-mq(lap-and-up) {
-    ul {
-      display: flex;
-    }
+  &__contact-details {
+    @include av-mq(lap-and-up) {
+      ul {
+        display: flex;
+      }
 
-    li {
-      margin-right: $gutter-sml;
+      li {
+        margin-right: $gutter-sml;
+      }
     }
   }
 }
