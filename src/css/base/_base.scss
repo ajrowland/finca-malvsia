@@ -173,3 +173,13 @@ button {
     font-size: $base-font-size-med;
   }
 }
+
+input,
+button,
+select {
+  appearance: none;
+  /* stylelint-disable */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  /* stylelint-enable */
+}
