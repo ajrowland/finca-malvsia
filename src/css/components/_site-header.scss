@@ -19,6 +19,11 @@
   }
 }
 
+.is--modal-active {
+  overflow: hidden;
+  position: fixed;
+}
+
 .c-header {
   position: absolute;
   padding-top: 30px;

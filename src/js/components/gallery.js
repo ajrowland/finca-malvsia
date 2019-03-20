@@ -53,6 +53,7 @@ class Gallery {
       el.addEventListener('click', (ev) => {
         ev.preventDefault();
 
+        document.body.classList.remove('is--nav-active');
         document.body.classList.add('is--modal-active');
       });
     });
