@@ -1,6 +1,7 @@
 ﻿import SiteHeader from './components/siteheader.js';
-import Gallery from './components/gallery.js';
+import Banner from './components/banner.js';
 import Slider from './components/slider.js';
+import Gallery from './components/gallery.js';
 
 // Array.forEach polyfill.
 if (window.NodeList && !NodeList.prototype.forEach) {
@@ -22,9 +23,12 @@ if (typeof window.CustomEvent !== 'function') {
 }
 
 // Initiate component functionality.
-new SiteHeader(document.querySelectorAll('[data-site-header]'));
-new Gallery(document.querySelectorAll('[data-gallery]'));
-new Slider(document.querySelectorAll('[data-slider]'));
+window.addEventListener('load', () => {
+  new SiteHeader(document.querySelectorAll('[data-site-header]'));
+  new Banner(document.querySelectorAll('[data-banner]'));
+  new Slider(document.querySelectorAll('[data-slider]'));
+  new Gallery(document.querySelectorAll('[data-gallery-init]'));
+});
 
 // Not used in production.
 if (process.env.NODE_ENV === 'development') {

@@ -1,67 +1,59 @@
 class Gallery {
   constructor(elements) {
-    window.addEventListener('load', () => {
-      elements.forEach(function(el) {
 
-        const cacheEl = {
-          itemContainer: el.querySelector('[data-gallery-items]'),
-          indicatorContainer: el.querySelector('[data-gallery-indicator]')
-        };
+  // Set up gallery model.
+    var cacheEl = {
+      galleries: document.querySelectorAll('[data-slider]'),
+      galleryContainer: document.querySelector('[data-gallery-container]'),
+      gallerySelector: document.querySelector('[data-gallery-selector]'),
+      galleryClose: document.querySelector('[data-gallery-close]'),
+      galleryHeading: document.querySelector('[data-gallery-heading]'),
+    };
 
-        let currentItem = 0;
-        const items = Array.from(cacheEl.itemContainer.children);
-        const activeClass = 'is--active';
+    var firstGallery = true;
+    var activeClass = 'is--active';
 
-        items.forEach(function(item) {
-          let indicatorItem = document.createElement('li');
+    cacheEl.galleries.forEach(function(gallery) {
+      var title = gallery.querySelector('[data-slider-heading]').textContent;
+      var galleryClone = gallery.querySelector('[data-slider-items]').cloneNode(true);
+      galleryClone.style.transform = `translateX(0)`;
 
-          if (item.classList.contains(activeClass)) {
-            indicatorItem.setAttribute('class', activeClass);
-          }
+      if (firstGallery) {
+        cacheEl.galleryHeading.textContent = title;
+        galleryClone.classList.add(activeClass);
+      }
 
-          if (item.hasAttribute('alt')) {
-            indicatorItem.appendChild(document.createTextNode(item.getAttribute('alt')));
-          }
+      cacheEl.galleryContainer.appendChild(galleryClone);
+      cacheEl.gallerySelector.innerHTML += `<option>${title}</option>`;
+      firstGallery = false;
+    });
 
-          cacheEl.indicatorContainer.appendChild(indicatorItem);
-        });
+    var galleries = cacheEl.galleryContainer.childNodes;
 
-        const methods = {
-          changeImage: function(item) {
-            currentItem = item;
+    // Drop down event.
+    cacheEl.gallerySelector.addEventListener('change', (ev) => {
+      galleries.forEach(function(gallery) {
+        gallery.classList.remove(activeClass);
+      });
 
-            if (currentItem < 0) {
-              currentItem = items.length - 1;
-            } else if (currentItem > items.length -1) {
-              currentItem = 0;
-            }
-  
-            items.forEach(function(item) {
-              item.classList.remove(activeClass);
-            });
-  
-            indicatorItems.forEach(function(item) {
-              item.classList.remove(activeClass);
-            });
-  
-            items[currentItem].classList.add(activeClass);
-            indicatorItems[currentItem].classList.add(activeClass);
-          }
-        };
+      galleries[cacheEl.gallerySelector.selectedIndex].classList.add(activeClass);
+      cacheEl.galleryHeading.textContent = cacheEl.gallerySelector[cacheEl.gallerySelector.selectedIndex].textContent;
+    });
 
-        const indicatorItems = Array.from(cacheEl.indicatorContainer.children);
+    // Close modal event.
+    cacheEl.galleryClose.addEventListener('click', (ev) => {
+      ev.preventDefault();
 
-        const clickInterval = setInterval(function() {
-          methods.changeImage(currentItem + 1);
-        }, 5000);
+      document.body.classList.remove('is--modal-active');
+    });
 
-        el.addEventListener('click', (ev) => {
-          clearInterval(clickInterval);
+    //Open model event.
+    elements.forEach(function(el) {
 
-          currentItem += (ev.clientX - ev.target.getBoundingClientRect().left) > el.offsetWidth / 2 ? 1 : -1;
+      el.addEventListener('click', (ev) => {
+        ev.preventDefault();
 
-          methods.changeImage(currentItem);
-        }, false);
+        document.body.classList.add('is--modal-active');
       });
     });
   }

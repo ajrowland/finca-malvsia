@@ -12,7 +12,7 @@
             <img src="http://www.fincamalvasia.com/images/home-gallery/6.jpg" />
           </div>
           <div class="c-property__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
-          <h2>La Finca</h2>
+          <h2 data-slider-heading>La Finca</h2>
         </div>
         <div class="c-property__item-info">
           <a href="#" title="La Finca Overview">La Finca Overview</a>
@@ -31,7 +31,7 @@
             <img src="http://www.fincamalvasia.com/images/home-gallery/1.jpg" />
           </div>
           <div class="c-property__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
-          <h2>La Finca</h2>
+          <h2 data-slider-heading>Property 2</h2>
         </div>
         <div class="c-property__item-info">
           <a href="#" title="La Finca Overview">La Finca Overview</a>
@@ -50,7 +50,7 @@
             <img src="http://www.fincamalvasia.com/images/home-gallery/2.jpg" />
           </div>
           <div class="c-property__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
-          <h2>La Finca</h2>
+          <h2 data-slider-heading>Property 3</h2>
         </div>
         <div class="c-property__item-info">
           <a href="#" title="La Finca Overview">La Finca Overview</a>
@@ -69,7 +69,7 @@
             <img src="http://www.fincamalvasia.com/images/home-gallery/3.jpg" />
           </div>
           <div class="c-property__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
-          <h2>La Finca</h2>
+          <h2 data-slider-heading>Property 4</h2>
         </div>
         <div class="c-property__item-info">
           <a href="#" title="La Finca Overview">La Finca Overview</a>
@@ -88,7 +88,7 @@
             <img src="http://www.fincamalvasia.com/images/home-gallery/4.jpg" />
           </div>
           <div class="c-property__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
-          <h2>La Finca</h2>
+          <h2 data-slider-heading>Property 5</h2>
         </div>
         <div class="c-property__item-info">
           <a href="#" title="La Finca Overview">La Finca Overview</a>
@@ -107,7 +107,7 @@
             <img src="http://www.fincamalvasia.com/images/home-gallery/5.jpg" />
           </div>
           <div class="c-property__item-spec">3 bedroom Private Villa &amp; Pool - Sleeps up to 7 guests</div>
-          <h2>La Finca</h2>
+          <h2 data-slider-heading>Property 6</h2>
         </div>
         <div class="c-property__item-info">
           <a href="#" title="La Finca Overview">La Finca Overview</a>
@@ -117,16 +117,15 @@
       </div>
     </div>
   </div>
-  <div class="c-property__modal">
+  <div class="c-property__modal" data-gallery-modal>
     <div class="c-property__modal-inner">
-      <form>
-        <h2>Property name</h2>
-        <select>
-          <option>Select a gallery to view</option>
-        </select>
+      <button class="c-property__modal-close" data-gallery-close>Close</button>
+      <form method="post" action="">
+        <h2 data-gallery-heading></h2>
+        <select data-gallery-selector></select>
         <button class="e-button">Make a booking</button>
       </form>
-      <img src="http://www.fincamalvasia.com/images/home-gallery/5.jpg" />
+      <div class="c-property__modal-container" data-gallery-container></div>
     </div>
   </div>
 </section>
