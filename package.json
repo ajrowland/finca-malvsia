@@ -6,8 +6,8 @@
   "scripts": {
     "assets:dev": "webpack --config webpack.dev.js",
     "assets:prod": "webpack --config webpack.prod.js",
-    "build": "SET NODE_ENV=production && npm run assets:prod && dotnet publish -c Release",
-    "start": "SET NODE_ENV=development && dotnet watch run",
+    "build": "npm run assets:prod && dotnet publish -c Release",
+    "start": "dotnet watch run",
     "lint": "eslint . --ext .js --cache",
     "stylelint": "stylelint '**/*.scss' --config .stylelintrc.json",
     "validate": "npm ls",
